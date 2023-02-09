@@ -6,7 +6,7 @@ export default function Hero() {
       <div className={styles.textcontainer}>
             <p><u><em>The</em></u> Python</p>
             <p className={styles.frameworkgradient}>game framework</p>
-            <p>since 2001</p>
+            <p>since 2000</p>
         <code className={styles.pipinstall}>pip install pygame-ce</code>
       </div>
       <div className={styles.showcasecontainer}/>
