@@ -1,0 +1,26 @@
+.powered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: grey;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: crisp-edges;
+}
+
+.poweredcontainer {
+    width: 1200px;
+    max-width: 90vw;
+}
+
+.header {
+    font-weight: 700;
+    font-size: 2.1rem;
+}
+
+.poweredcards {
+    display: flex;
+    justify-content: center;
+}

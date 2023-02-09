@@ -1,0 +1,10 @@
+.card {
+    width: 350px;
+    margin: 20px;
+    padding: 15px;
+}
+
+.label {
+    font-size: 1.5rem;
+    font-weight: 700;
+}

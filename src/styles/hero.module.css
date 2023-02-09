@@ -6,7 +6,7 @@
     font-size: 3.5rem;
     justify-content: space-around;
     padding: 0 75px;
-    height: 80vh;
+    height: 90vh;
 }
 
 .textcontainer {
@@ -21,8 +21,14 @@
 }
 
 .showcasecontainer {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.showcaseimage {
     width: 750px;
     height: 600px;
+    border-radius: 10px;
     background-color: aliceblue;
     background-image: url(https://i.imgur.com/7mOk5E7.gif);
     background-repeat: no-repeat;

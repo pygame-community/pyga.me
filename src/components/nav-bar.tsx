@@ -5,7 +5,6 @@ export default function Navbar() {
         <div className={styles.nav}>
             <div className={styles.title}>pygame</div>
             <ul>
-                <li><a href="about">About</a></li>
                 <li><a href="docs">Documentation</a></li>
                 <li><a href="tutorials">Tutorials</a></li>
                 <li><a href="contribute">Contribute</a></li>
