@@ -53,7 +53,7 @@ class Powered extends React.Component<any, any> {
     this.changeBackground = this.changeBackground.bind(this);
   }
 
-  changeBackground(e: MouseEvent) {
+  changeBackground(e: any) {
     const data = Object.assign({}, e.target.dataset);
     this.setState({ currentGameId: data.info });
   }
