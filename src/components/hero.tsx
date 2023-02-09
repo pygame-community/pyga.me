@@ -11,7 +11,9 @@ export default function Hero() {
       </div>
       <div className={styles.showcasecontainer}>
         <div className={styles.showcaseimage}/>
+        <a href="https://dafluffypotato.itch.io/hue-flowing">
         <p>&quot;Hue Flowing&quot; by DaFluffyPotato</p>
+        </a>
       </div>
     </div>
   );

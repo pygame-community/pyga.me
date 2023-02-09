@@ -4,6 +4,7 @@ import Navbar from '@/components/nav-bar'
 import Hero from '@/components/hero'
 import About from '@/components/about'
 import Powered from '@/components/powered'
+import GetInvolved from '@/components/get-involved'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero/>
         <About/>
         <Powered/>
+        <GetInvolved/>
       </main>
     </>
   )

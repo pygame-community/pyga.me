@@ -1,0 +1,44 @@
+.getinvolved {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.cardheader {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px;
+    padding: 15px;
+    padding-top: 2px;
+    padding-bottom: 0;
+}
+
+.card {
+    width: 650px;
+    margin: 20px;
+    padding: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.label {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.showcasecontainer {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.showcaseimage {
+    width: 750px;
+    height: 600px;
+    border-radius: 10px;
+    background-image: url(../assets/six-shooter-1.png);
+    background-position: center center;
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
