@@ -6,6 +6,7 @@
     background-color: grey;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
     image-rendering: crisp-edges;
 }
