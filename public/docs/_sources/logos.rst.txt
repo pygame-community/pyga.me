@@ -37,7 +37,7 @@ August 29, 2021.
 
 
 There is a higher resolution layered photoshop image
-available `here <https://www.pygame.org/ftp/pygame_logo.psd>`_. *(1.3 MB)*
+available `here <https://www.pyga.me/ftp/pygame_logo.psd>`_. *(1.3 MB)*
 
 Legacy logos
 ------------
