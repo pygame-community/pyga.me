@@ -1,21 +1,13 @@
 import React, { MouseEvent } from "react";
 import styles from "@/styles/powered.module.css";
-import codeNameMallow from "@/assets/codename-mallow-1.jpg";
 import drawnDownAbyss1 from "@/assets/drawn-down-abyss-1.png";
 import froggo1 from "@/assets/froggo-swing-n-grapple-1.png";
 import resync1 from "@/assets/resync-1.png";
+import tuxemon1 from "@/assets/tuxemon-1.png";
 import PoweredCard from "./powered-card";
 
 const games = [
   {
-    id: 0,
-    name: "Codename: Mallow",
-    author: "Ancalabro Entertainment",
-    image: codeNameMallow.src,
-    mainlink: "https://store.steampowered.com/app/1437220/Codename_Mallow/",
-  },
-  {
-    id: 1,
     name: "Drawn Down Abyss",
     author: "DaFluffyPotato",
     image: drawnDownAbyss1.src,
@@ -25,7 +17,6 @@ const games = [
     youtube: "https://www.youtube.com/watch?v=lmaEy_2LMdo",
   },
   {
-    id: 2,
     name: "Froggo Swing 'n Grapple",
     author: "smellyfrog",
     image: froggo1.src,
@@ -35,12 +26,17 @@ const games = [
     youtube: "https://www.youtube.com/watch?v=GufkQcT-H2k",
   },
   {
-    id: 3,
     name: "RESYNC",
     author: "Ghast",
     image: resync1.src,
     mainlink: "https://ghastly.itch.io/resync",
     itchio: "https://ghastly.itch.io/resync",
+  },
+  {
+    name: "Tuxemon",
+    author: "The Tuxemon Community",
+    image: tuxemon1.src,
+    mainlink: "https://github.com/Tuxemon/Tuxemon",
   },
 ];
 
