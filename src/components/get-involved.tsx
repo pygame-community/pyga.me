@@ -9,7 +9,7 @@ export default function GetInvolved() {
             <p>&quot;Six Shooter&quot; by plasmastarfish</p>
         </a>
         </div>
-        <div className={styles.cards}>
+        <div>
             <div className={styles.cardheader}>Get Involved</div>
             <div className={styles.card}>
                 <div className={styles.label}>Game Jams</div>
