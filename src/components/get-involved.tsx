@@ -10,22 +10,11 @@ export default function GetInvolved() {
         </a>
         </div>
         <div>
-            <div className={styles.cardheader}>Get Involved</div>
             <div className={styles.card}>
-                <div className={styles.label}>Game Jams</div>
-                The pygame community Discord server hosts yearly game
-                jams to give people opportunities to build games in a
-                short timeframe and make friends.
-            </div>
-            <div className={styles.card}>
-                <div className={styles.label}>Peer to Peer Help</div>
-                Many social media platforms ranging from Discord to
-                the subreddit offers help to all pygame users.
-            </div>
-            <div className={styles.card}>
-                <div className={styles.label}>Pygame Development</div>
-                Pygame welcomes all contributors to help out on development
-                ranging from documentation to core development.
+                <div className={styles.label}>Get Involved</div>
+                Join the global team behind the most popular Python
+                game framework. Ranging from documentation revisions
+                to introducing new features to the pygame API.
             </div>
         </div>
     </div>
