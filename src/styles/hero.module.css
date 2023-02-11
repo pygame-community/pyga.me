@@ -3,14 +3,13 @@
     justify-content: center;
     align-items: center;
     font-weight: 700;
-    font-size: 3.5rem;
     justify-content: space-around;
     padding: 0 75px;
     height: 90vh;
 }
 
 .textcontainer {
-    width: 30vw;
+    font-size: 3.5rem;
 }
 
 .pipinstall {
@@ -40,4 +39,72 @@
         linear-gradient(45deg, rgb(22, 125, 53), rgb(63, 188, 111));
     background-clip: text;
     color: transparent;
+}
+
+@media only screen and (max-width: 1500px) {
+    .textcontainer {
+        font-size: 3rem;
+    }
+    
+    .pipinstall {
+        font-size: 1.0rem;
+    }
+
+    .showcasecontainer {
+        font-size: 0.7rem;
+    }
+    
+    .showcaseimage {
+        width: 500px;
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .textcontainer {
+        font-size: 2.3rem;
+    }
+    
+    .pipinstall {
+        font-size: 0.6rem;
+    }
+
+    .showcasecontainer {
+        font-size: 0.7rem;
+    }
+    
+    .showcaseimage {
+        width: 375px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .textcontainer {
+        font-size: 1.9rem;
+    }
+
+    .showcasecontainer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero {
+        height: 100vh;
+    }
+
+    .textcontainer {
+        font-size: 1.5rem;
+    }
+    
+    .pipinstall {
+        font-size: 0.5rem;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    
+    .pipinstall {
+        display: none;
+    }
 }

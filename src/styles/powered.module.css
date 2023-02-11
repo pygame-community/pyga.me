@@ -25,3 +25,9 @@
     display: flex;
     justify-content: center;
 }
+
+@media only screen and (max-width: 950px) {
+    .poweredcards {
+        display: block;
+    }
+}
