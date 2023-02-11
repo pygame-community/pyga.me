@@ -5,6 +5,7 @@ import Hero from '@/components/hero'
 import About from '@/components/about'
 import Powered from '@/components/powered'
 import GetInvolved from '@/components/get-involved'
+import Footer from '@/components/footer'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <About/>
         <Powered/>
         <GetInvolved/>
+        <Footer/>
       </main>
     </>
   )
