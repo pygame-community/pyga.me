@@ -41,7 +41,11 @@
 /* Ultra Small
 -----------------------*/
 @media only screen and (max-width: 600px) {
-  .nav {
+  .title {
     display: none;
+  }
+
+  .nav {
+    justify-content: center;
   }
 }
