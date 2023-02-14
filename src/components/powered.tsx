@@ -20,7 +20,8 @@ const games = [
     name: "Froggo Swing 'n Grapple",
     author: "smellyfrog",
     image: froggo1.src,
-    mainlink: "https://store.steampowered.com/app/1743930/Froggo_Swing_n_Grapple/",
+    mainlink:
+      "https://store.steampowered.com/app/1743930/Froggo_Swing_n_Grapple/",
     itchio: "https://smellyfrog.itch.io/froggo-swing-n-grapple",
     steam: "https://store.steampowered.com/app/1743930/Froggo_Swing_n_Grapple/",
     youtube: "https://www.youtube.com/watch?v=GufkQcT-H2k",
@@ -57,12 +58,12 @@ class Powered extends React.Component<any, any> {
   render() {
     // TODO: clean this up
     if (this.state.currentGameId === undefined) {
-        this.setState({ currentGameId: 0 });
+      this.setState({ currentGameId: 0 });
     }
 
     var currentGame = games[this.state.currentGameId];
     if (currentGame === undefined) {
-        currentGame = games[0]
+      currentGame = games[0];
     }
 
     return (
@@ -79,8 +80,16 @@ class Powered extends React.Component<any, any> {
           <div className={styles.poweredcards}>
             {games.map((data, key) => {
               return (
-                <div key={key} onMouseEnter={this.changeBackground} data-info={key}>
-                  <PoweredCard name={data.name} author={data.author} link={data.mainlink} />
+                <div
+                  key={key}
+                  onMouseEnter={this.changeBackground}
+                  data-info={key}
+                >
+                  <PoweredCard
+                    name={data.name}
+                    author={data.author}
+                    link={data.mainlink}
+                  />
                 </div>
               );
             })}
