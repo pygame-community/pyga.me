@@ -6,6 +6,8 @@ import About from '@/components/about';
 import Powered from '@/components/powered';
 import GetInvolved from '@/components/get-involved';
 import Footer from '@/components/footer';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function Home() {
   return (
