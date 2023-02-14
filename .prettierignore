@@ -1,0 +1,5 @@
+./dist
+./public
+./out
+./node_modules
+./.next
