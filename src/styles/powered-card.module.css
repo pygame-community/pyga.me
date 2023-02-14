@@ -1,15 +1,15 @@
 .card {
-    margin: 20px;
-    padding: 15px;
+  margin: 20px;
+  padding: 15px;
 }
 
 .card:hover {
-    color: cadetblue;
-    transition: all;
-    transition-duration: 300ms;
+  color: cadetblue;
+  transition: all;
+  transition-duration: 300ms;
 }
 
 .name {
-    font-size: 1.5rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
 }

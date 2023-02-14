@@ -1,52 +1,52 @@
 .getinvolved {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .cardheader {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-left: 20px;
-    margin-bottom: 0;
-    padding: 15px;
-    padding-top: 2px;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-bottom: 0;
+  padding: 15px;
+  padding-top: 2px;
 }
 
 .card {
-    max-width: 650px;
-    margin: 20px;
-    margin-top: 0;
-    padding: 15px;
-    padding-top: 0;
-    padding-bottom: 2px;
+  max-width: 650px;
+  margin: 20px;
+  margin-top: 0;
+  padding: 15px;
+  padding-top: 0;
+  padding-bottom: 2px;
 }
 
 .label {
-    font-size: 3rem;
-    font-weight: 700;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .showcasecontainer {
-    font-size: 1rem;
-    font-weight: 400;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .showcaseimage {
-    width: 750px;
-    height: 600px;
-    border-radius: 10px;
-    background-image: url(../assets/six-shooter-1.png);
-    background-position: center center;
-    background-color: aliceblue;
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 750px;
+  height: 600px;
+  border-radius: 10px;
+  background-image: url(../assets/six-shooter-1.png);
+  background-position: center center;
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media only screen and (max-width: 1500px) {
-    .showcasecontainer {
-        display: none;
-    }
+  .showcasecontainer {
+    display: none;
+  }
 }

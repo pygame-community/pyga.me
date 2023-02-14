@@ -1,109 +1,109 @@
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    justify-content: space-around;
-    padding: 0 75px;
-    height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  justify-content: space-around;
+  padding: 0 75px;
+  height: 90vh;
 }
 
 .textcontainer {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
 .disclaimer {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .pipinstall {
-    font-size: 1.2rem;
-    background-color: rgb(20, 20, 20);
-    padding: 15px;
-    border-radius: 10px;
+  font-size: 1.2rem;
+  background-color: rgb(20, 20, 20);
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .showcasecontainer {
-    font-size: 1rem;
-    font-weight: 400;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .showcaseimage {
-    width: 750px;
-    height: 600px;
-    border-radius: 10px;
-    background-color: aliceblue;
-    background-image: url(https://i.imgur.com/7mOk5E7.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 750px;
+  height: 600px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  background-image: url(https://i.imgur.com/7mOk5E7.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .frameworkgradient {
-    background-image: linear-gradient(45deg, rgb(22, 125, 53), rgb(63, 188, 111));
-    background-clip: text;
-    color: transparent;
+  background-image: linear-gradient(45deg, rgb(22, 125, 53), rgb(63, 188, 111));
+  background-clip: text;
+  color: transparent;
 }
 
 @media only screen and (max-width: 1500px) {
-    .textcontainer {
-        font-size: 3rem;
-    }
+  .textcontainer {
+    font-size: 3rem;
+  }
 
-    .pipinstall {
-        font-size: 1rem;
-    }
+  .pipinstall {
+    font-size: 1rem;
+  }
 
-    .showcasecontainer {
-        font-size: 0.7rem;
-    }
+  .showcasecontainer {
+    font-size: 0.7rem;
+  }
 
-    .showcaseimage {
-        width: 500px;
-        height: 400px;
-    }
+  .showcaseimage {
+    width: 500px;
+    height: 400px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
-    .textcontainer {
-        font-size: 2.3rem;
-    }
+  .textcontainer {
+    font-size: 2.3rem;
+  }
 
-    .pipinstall {
-        font-size: 0.6rem;
-    }
+  .pipinstall {
+    font-size: 0.6rem;
+  }
 
-    .showcasecontainer {
-        font-size: 0.7rem;
-    }
+  .showcasecontainer {
+    font-size: 0.7rem;
+  }
 
-    .showcaseimage {
-        width: 375px;
-        height: 300px;
-    }
+  .showcaseimage {
+    width: 375px;
+    height: 300px;
+  }
 }
 
 @media only screen and (max-width: 950px) {
-    .textcontainer {
-        font-size: 1.9rem;
-    }
+  .textcontainer {
+    font-size: 1.9rem;
+  }
 
-    .showcasecontainer {
-        display: none;
-    }
+  .showcasecontainer {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .textcontainer {
-        font-size: 1.5rem;
-    }
+  .textcontainer {
+    font-size: 1.5rem;
+  }
 
-    .pipinstall {
-        font-size: 0.5rem;
-        padding: 15px;
-        border-radius: 10px;
-    }
+  .pipinstall {
+    font-size: 0.5rem;
+    padding: 15px;
+    border-radius: 10px;
+  }
 
-    .pipinstall {
-        display: none;
-    }
+  .pipinstall {
+    display: none;
+  }
 }

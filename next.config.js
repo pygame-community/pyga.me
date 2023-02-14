@@ -10,8 +10,8 @@ const nextConfig = {
         destination: '/docs/index.html',
         locale: false,
       },
-    ]
-  }
-}
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
