@@ -1,11 +1,11 @@
 .card {
-  max-width: 350px;
-  margin: 20px;
-  padding: 15px;
-  padding-bottom: 0;
+    max-width: 350px;
+    margin: 20px;
+    padding: 15px;
+    padding-bottom: 0;
 }
 
 .label {
-  font-size: 1.5rem;
-  font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 700;
 }

@@ -1,37 +1,37 @@
 .powered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  background-color: grey;
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  image-rendering: crisp-edges;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: grey;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    image-rendering: crisp-edges;
 }
 
 .poweredcontainer {
-  width: 1200px;
-  max-width: 90vw;
+    width: 1200px;
+    max-width: 90vw;
 }
 
 .header {
-  font-weight: 700;
-  font-size: 2.1rem;
+    font-weight: 700;
+    font-size: 2.1rem;
 }
 
 .poweredcards {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 950px) {
-  .poweredcards {
-    display: block;
-  }
-  .powered {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
+    .poweredcards {
+        display: block;
+    }
+    .powered {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
