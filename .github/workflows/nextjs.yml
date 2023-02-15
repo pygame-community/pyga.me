@@ -24,7 +24,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-docs:
+  build:
+    # Build documentation
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -46,11 +47,7 @@ jobs:
         run: |
           python utils/generate_docs.py
 
-  # Build job
-  build-site:
-    runs-on: ubuntu-latest
-    needs: build-docs
-    steps:
+      # Build actual site
       - name: Checkout
         uses: actions/checkout@v3
       - name: Detect package manager
@@ -110,7 +107,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build-site
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
