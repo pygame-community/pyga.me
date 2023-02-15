@@ -24,12 +24,27 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Build job
   build:
+    # Build documentation
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11']
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install pygame-ce
+        run: |
+          python -m pip install --upgrade pip
+          pip install pygame-ce
+      - name: Clone and move docs
+        run: |
+          python utils/generate_docs.py
+
+      # Build actual site
       - name: Detect package manager
         id: detect-package-manager
         run: |
