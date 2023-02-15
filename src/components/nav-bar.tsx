@@ -3,7 +3,9 @@ import styles from '@/styles/nav-bar.module.css';
 export default function Navbar() {
   return (
     <div className={styles.nav}>
-      <div className={styles.title}>pygame</div>
+      <div className={styles.title}>
+        <a href="">pygame</a>
+      </div>
       <ul>
         <li>
           <a href="docs">Documentation</a>
