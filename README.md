@@ -21,8 +21,10 @@ We welcome all outside contributors to help out on building our website, but the
 
 ### Instructions to Build
 
-1. Install NodeJS
-2. Run `npm install` to install all dependencies
-3. Run `npm run dev` to create a local server to start contributing!
-4. Open [http://localhost:3000](http://localhost:3000) to view your changes
-5. Before pushing a commit, please run `npx prettier --write .`
+1. Install [Visual Studio Code](https://code.visualstudio.com/)
+2. Install the [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) extensions for Visual Studio Code
+3. Install [NodeJS](https://nodejs.org/en/)
+4. Run `npm install` to install all dependencies
+5. Run `npm run dev` to create a local server to start contributing!
+6. Open [http://localhost:3000](http://localhost:3000) to view your changes
+7. Before pushing a commit, please run `npx prettier --write .` and `black .`
