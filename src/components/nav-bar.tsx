@@ -1,10 +1,15 @@
 import styles from '@/styles/nav-bar.module.css';
+import menu_open_icon from '../assets/hamburger-icons/menu_open.png';
+import menu_closed_icon from '../assets/hamburger-icons/menu_close.png';
 
 import React, { useEffect, useState } from 'react';
-import { MDBContainer, MDBCollapse, MDBNavbar, MDBNavbarToggler, MDBIcon, MDBBtn } from 'mdb-react-ui-kit';
 
 export default function Navbar() {
-  const [showNavExternal, setShowNavExternal] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleButtonClick() {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <>
@@ -25,41 +30,20 @@ export default function Navbar() {
         </div>
       </div>
       <div className={styles.hamburgerContent}>
-        <MDBNavbar>
-          <MDBContainer fluid>
-            <div className={styles.title}>pygame</div>
-            <MDBNavbarToggler
-              type="button"
-              data-target="#navbarToggleExternalContent"
-              aria-controls="navbarToggleExternalContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              onClick={() => setShowNavExternal(!showNavExternal)}
-            >
-              <MDBIcon icon="bars" fas />
-            </MDBNavbarToggler>
-          </MDBContainer>
-        </MDBNavbar>
-
-        <MDBCollapse show={showNavExternal}>
-          <div className="bg-light shadow-3 p-4">
-            <a href="docs">
-              <MDBBtn block className="border-bottom m-0" color="link">
-                Documentation
-              </MDBBtn>
-            </a>
-            <a href="tutorials">
-              <MDBBtn block className="border-bottom m-0" color="link">
-                Tutorials
-              </MDBBtn>
-            </a>
-            <a href="https://github.com/pygame-community/pygame-ce">
-              <MDBBtn block className="border-bottom m-0" color="link">
-                Contribute
-              </MDBBtn>
-            </a>
-          </div>
-        </MDBCollapse>
+        <nav className={styles.navbar}>
+          <img src={isOpen ? menu_closed_icon.src : menu_open_icon.src} onClick={handleButtonClick} />
+          <ul className={`${styles.navbarMenu} ${isOpen ? styles.visible : ''}`}>
+            <li>
+              <a href="docs">Documentation</a>
+            </li>
+            <li>
+              <a href="tutorials">Tutorials</a>
+            </li>
+            <li>
+              <a href="https://github.com/pygame-community/pygame-ce">Contribute</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </>
   );

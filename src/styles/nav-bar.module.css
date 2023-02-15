@@ -42,6 +42,61 @@
   color: #dedede;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.navbarMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #ffffff;
+  top: 65px;
+  right: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.navbarMenu.visible {
+  transform: translateX(0%);
+}
+
+.navbarMenu li {
+  margin: 10px 0;
+  list-style-type: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+}
+
+.navbarMenu a {
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+}
+
+.navbarMenu li a {
+  font-size: 1.2rem;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbarMenu li:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
 /* Ultra Small
 -----------------------*/
 @media only screen and (max-width: 600px) {
