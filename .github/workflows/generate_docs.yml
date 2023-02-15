@@ -1,16 +1,16 @@
 name: Generate pygame-ce documentation
 
-on: 
+on:
   workflow_dispatch: # for manual workflow trigger
   schedule:
-    - cron: "0 0 * * *" # runs at every 12AM UTC
+    - cron: '0 0 * * *' # runs at every 12AM UTC
 
 jobs:
   download-pygame-ce:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.11"]
+        python-version: ['3.11']
     defaults:
       run:
         working-directory: ../pyga.me
