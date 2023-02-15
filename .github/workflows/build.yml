@@ -5,6 +5,8 @@
 name: Deploy Next.js site to Pages
 
 on:
+  schedule:
+    - cron: '0 0 * * *' # runs at every 12AM UTC
   # Runs on pushes targeting the default branch
   push:
     branches: ['main']
@@ -25,12 +27,12 @@ concurrency:
 
 jobs:
   build:
-    # Build documentation
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: ['3.11']
     steps:
+      # Build documentation pages
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
@@ -44,7 +46,7 @@ jobs:
         run: |
           python utils/generate_docs.py
 
-      # Build actual site
+      # Build website
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -96,7 +98,6 @@ jobs:
         with:
           path: ./out
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
