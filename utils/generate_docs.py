@@ -2,6 +2,7 @@ import pygame
 import shutil
 import os
 
+
 if "__main__" == __name__:
     target_directory = os.path.join("public", "docs")
     docs_path = os.path.join(os.path.dirname(pygame.__file__), "docs", "generated")
