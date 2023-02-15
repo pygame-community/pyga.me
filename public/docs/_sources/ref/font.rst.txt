@@ -472,28 +472,6 @@ solves no longer exists, it will likely be removed in the future.
 
       .. ## Font.get_descent ##
 
-   .. method:: set_pointsize
-
-      | :sl:`set the point size of the font`
-      | :sg:`set_pointsize(bool) -> None`
-
-      Enables the bold rendering of text. This is a fake stretching of the font
-      that doesn't look good on many font types. If possible load the font from
-      a real bold font file. While bold, the font will have a different width
-      than when normal. This can be mixed with the italic, underline and
-      strikethrough modes.
-
-      .. ## Font.set_pointsize ##
-
-   .. method:: get_pointsize
-
-      | :sl:`get the point size of the font`
-      | :sg:`get_pointsize() -> bool`
-
-      Return True when the font bold rendering mode is enabled.
-
-      .. ## Font.get_pointsize ##
-
    .. ## pygame.font.Font ##
 
 .. ## pygame.font ##

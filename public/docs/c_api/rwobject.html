@@ -6,16 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>API exported by pygame.rwobject &#8212; pygame v2.1.4 documentation</title>
+    <title>API exported by pygame.rwobject &#8212; pygame v2.1.3 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pygame.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../_static/pygame.ico"/>
+    <link rel="icon" href="../_static/pygame.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Class Surface API exported by pygame.surface" href="surface.html" />
@@ -27,14 +24,14 @@
   <div class="header">
 	<div class="flex-container">
 	<div class="logo">
-	  <a href="https://www.pyga.me/">
+	  <a href="https://pyga.me">
 	    <img src="../_static/pygame_tiny.png"/>
 	  </a>
 	  <h5>pygame documentation</h5>
 	</div>
 	<div class="pagelinks">
 	  <div class="top">
-	    <a href="https://www.pyga.me/">Pygame Home</a> ||
+	    <a href="https://pyga.me">Pygame Home</a> ||
 	    <a href="../index.html">Help Contents</a> ||
 	    <a href="../genindex.html">Reference Index</a>
 
@@ -104,13 +101,18 @@ object in a <code class="xref c c-type docutils literal notranslate"><span class
 <p>Header file: src_c/include/pygame.h</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.pgRWops_FromObject">
-<span class="n"><span class="pre">SDL_RWops</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">pgRWops_FromObject</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">PyObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">obj</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.pgRWops_FromObject" title="Permalink to this definition">¶</a><br /></dt>
+<span class="n"><span class="pre">SDL_RWops</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">pgRWops_FromObject</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">PyObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">obj</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">extptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.pgRWops_FromObject" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return a SDL_RWops struct filled to access <em>obj</em>.
 If <em>obj</em> is a string then let SDL open the file it names.
 Otherwise, if <em>obj</em> is a Python file-like object then use its <code class="docutils literal notranslate"><span class="pre">read</span></code>, <code class="docutils literal notranslate"><span class="pre">write</span></code>,
 <code class="docutils literal notranslate"><span class="pre">seek</span></code>, <code class="docutils literal notranslate"><span class="pre">tell</span></code>, and <code class="docutils literal notranslate"><span class="pre">close</span></code> methods. If threads are available,
 the Python GIL is acquired before calling any of the <em>obj</em> methods.
-On error raise a Python exception and return <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
+If you want to see the file extension, you can pass in a char double pointer
+that will be populated to a dynamically allocated string or NULL. Caller is
+responsible for freeing the extension string. It is safe to pass NULL if you
+don't care about the file extension. On error raise a Python exception and
+return <code class="docutils literal notranslate"><span class="pre">NULL</span></code>. If NULL is returned, the extptr will not be populated with
+dynamic memory, it is not necessary to free in that error handling.</p>
 </dd></dl>
 
 <dl class="c function">
@@ -127,14 +129,6 @@ On error raise a Python exception and return <code class="docutils literal notra
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pgRWops_IsFileObject</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">SDL_RWops</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">rw</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.pgRWops_IsFileObject" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return true if <em>rw</em> is a Python file-like object wrapper returned by <a class="reference internal" href="#c.pgRWops_FromObject" title="pgRWops_FromObject"><code class="xref c c-func docutils literal notranslate"><span class="pre">pgRWops_FromObject()</span></code></a>
 or <a class="reference internal" href="#c.pgRWops_FromFileObject" title="pgRWops_FromFileObject"><code class="xref c c-func docutils literal notranslate"><span class="pre">pgRWops_FromFileObject()</span></code></a>.</p>
-</dd></dl>
-
-<dl class="c function">
-<dt class="sig sig-object c" id="c.pgRWops_GetFileExtension">
-<span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">pgRWops_GetFileExtension</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">SDL_RWops</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">rw</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.pgRWops_GetFileExtension" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Return a string that contains the file extension of the original file
-loaded into the SDL_RWops object, or NULL if the SDL_RWops object comes
-from a file object.</p>
 </dd></dl>
 
 <dl class="c function">
@@ -172,7 +166,7 @@ If <em>obj</em> is <code class="docutils literal notranslate"><span class="pre">
 
 <br /><br />
 <hr />
-<a href="https://github.com/pygame/pygame/edit/main/docs/reST/c_api\rwobject.rst" rel="nofollow">Edit on GitHub</a>
+<a href="https://github.com/pygame-community/pygame-ce/edit/main/docs/reST/c_api/rwobject.rst" rel="nofollow">Edit on GitHub</a>
             <div class="clearer"></div>
           </div>
       </div>
@@ -193,10 +187,10 @@ If <em>obj</em> is <code class="docutils literal notranslate"><span class="pre">
         <li class="right" >
           <a href="rect.html" title="Class Rect API exported by pygame.rect"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">pygame v2.1.4 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pygame v2.1.3 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../c_api.html" accesskey="U">pygame C API</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">API exported by pygame.rwobject</a></li>
-    <script type="text/javascript" src="https://www.pyga.me/comment/jquery.plugin.docscomments.js"></script>
+    <script type="text/javascript" src="https://www.pygame.org/comment/jquery.plugin.docscomments.js"></script>
 
       </ul>
     </div>

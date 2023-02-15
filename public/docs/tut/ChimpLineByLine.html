@@ -6,16 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Pygame Tutorials - Line By Line Chimp Example &#8212; pygame v2.1.4 documentation</title>
+    <title>Pygame Tutorials - Line By Line Chimp Example &#8212; pygame v2.1.3 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pygame.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../_static/pygame.ico"/>
+    <link rel="icon" href="../_static/pygame.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="pygame/examples/chimp.py" href="chimp.py.html" />
@@ -27,14 +24,14 @@
   <div class="header">
 	<div class="flex-container">
 	<div class="logo">
-	  <a href="https://www.pyga.me/">
+	  <a href="https://pyga.me">
 	    <img src="../_static/pygame_tiny.png"/>
 	  </a>
 	  <h5>pygame documentation</h5>
 	</div>
 	<div class="pagelinks">
 	  <div class="top">
-	    <a href="https://www.pyga.me/">Pygame Home</a> ||
+	    <a href="https://pyga.me">Pygame Home</a> ||
 	    <a href="../index.html">Help Contents</a> ||
 	    <a href="../genindex.html">Reference Index</a>
 
@@ -236,7 +233,7 @@ load the sound file. Then we simply return the loaded Sound object.</p>
 all the logic for the game goes into these two classes. We will look over
 them one at a time here.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Fist</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;moves a clenched fist on the screen, following the mouse&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;moves a clenched fist on the screen, following the mouse&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">pg</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>  <span class="c1"># call Sprite initializer</span>
@@ -245,7 +242,7 @@ them one at a time here.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">punching</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;move the fist based on the mouse position&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;move the fist based on the mouse position&quot;&quot;&quot;</span>
         <span class="n">pos</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">mouse</span><span class="o">.</span><span class="n">get_pos</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">topleft</span> <span class="o">=</span> <span class="n">pos</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">move_ip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fist_offset</span><span class="p">)</span>
@@ -253,14 +250,14 @@ them one at a time here.</p>
             <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">move_ip</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">punch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;returns true if the fist collides with the target&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;returns true if the fist collides with the target&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">punching</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">punching</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="n">hitbox</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">inflate</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">hitbox</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">target</span><span class="o">.</span><span class="n">rect</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">unpunch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;called to pull the fist back&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;called to pull the fist back&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">punching</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
@@ -282,7 +279,7 @@ slightly if the fist is in the &quot;punching&quot; state.</p>
 state for the fist. The <cite>punch()</cite> method also returns a true value if the fist
 is colliding with the given target sprite.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Chimp</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;moves a monkey critter across the screen. it can spin the</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;moves a monkey critter across the screen. it can spin the</span>
 <span class="sd">    monkey when it is punched.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -295,14 +292,14 @@ is colliding with the given target sprite.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">dizzy</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;walk or spin, depending on the monkeys state&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;walk or spin, depending on the monkeys state&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dizzy</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_spin</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_walk</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">_walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;move the monkey across the screen, and turn at the ends&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;move the monkey across the screen, and turn at the ends&quot;&quot;&quot;</span>
         <span class="n">newpos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">move</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">newpos</span><span class="p">):</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">left</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
@@ -312,7 +309,7 @@ is colliding with the given target sprite.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="n">newpos</span>
 
     <span class="k">def</span> <span class="nf">_spin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;spin the monkey image&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;spin the monkey image&quot;&quot;&quot;</span>
         <span class="n">center</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">center</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dizzy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dizzy</span> <span class="o">+</span> <span class="mi">12</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dizzy</span> <span class="o">&gt;=</span> <span class="mi">360</span><span class="p">:</span>
@@ -324,7 +321,7 @@ is colliding with the given target sprite.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">get_rect</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="n">center</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">punched</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;this will cause the monkey to start spinning&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;this will cause the monkey to start spinning&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">dizzy</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dizzy</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">original</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span>
@@ -563,7 +560,7 @@ anything, but calling <cite>pg.quit()</cite> explicitly cleans up pygame's inter
 
 <br /><br />
 <hr />
-<a href="https://github.com/pygame/pygame/edit/main/docs/reST/tut\ChimpLineByLine.rst" rel="nofollow">Edit on GitHub</a>
+<a href="https://github.com/pygame-community/pygame-ce/edit/main/docs/reST/tut/ChimpLineByLine.rst" rel="nofollow">Edit on GitHub</a>
             <div class="clearer"></div>
           </div>
       </div>
@@ -584,9 +581,9 @@ anything, but calling <cite>pg.quit()</cite> explicitly cleans up pygame's inter
         <li class="right" >
           <a href="CameraIntro.html" title="Pygame Tutorials - Camera Module Introduction"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">pygame v2.1.4 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pygame v2.1.3 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Pygame Tutorials - Line By Line Chimp Example</a></li>
-    <script type="text/javascript" src="https://www.pyga.me/comment/jquery.plugin.docscomments.js"></script>
+    <script type="text/javascript" src="https://www.pygame.org/comment/jquery.plugin.docscomments.js"></script>
 
       </ul>
     </div>

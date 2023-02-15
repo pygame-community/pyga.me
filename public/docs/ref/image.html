@@ -6,16 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>pygame.image &#8212; pygame v2.1.4 documentation</title>
+    <title>pygame.image &#8212; pygame v2.1.3 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pygame.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../_static/pygame.ico"/>
+    <link rel="icon" href="../_static/pygame.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="pygame.joystick" href="joystick.html" />
@@ -27,14 +24,14 @@
   <div class="header">
 	<div class="flex-container">
 	<div class="logo">
-	  <a href="https://www.pyga.me/">
+	  <a href="https://pyga.me">
 	    <img src="../_static/pygame_tiny.png"/>
 	  </a>
 	  <h5>pygame documentation</h5>
 	</div>
 	<div class="pagelinks">
 	  <div class="top">
-	    <a href="https://www.pyga.me/">Pygame Home</a> ||
+	    <a href="https://pyga.me">Pygame Home</a> ||
 	    <a href="../index.html">Help Contents</a> ||
 	    <a href="../genindex.html">Reference Index</a>
 
@@ -277,20 +274,14 @@ Saving to a file-like object with JPEG is possible.</p>
 <span class="sig-prename descclassname"><span class="pre">pygame.image.</span></span><span class="sig-name descname"><span class="pre">get_sdl_image_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygame.image.get_sdl_image_version" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line"><span class="summaryline">get version number of the SDL_Image library being used</span></div>
-<div class="line"><span class="signature">get_sdl_image_version(linked=True) -&gt; None</span></div>
-<div class="line"><span class="signature">get_sdl_image_version(linked=True) -&gt; (major, minor, patch)</span></div>
+<div class="line"><span class="signature">get_sdl_image_version() -&gt; None</span></div>
+<div class="line"><span class="signature">get_sdl_image_version() -&gt; (major, minor, patch)</span></div>
 </div>
 <p>If pygame is built with extended image formats, then this function will
 return the SDL_Image library's version number as a tuple of 3 integers
 <code class="docutils literal notranslate"><span class="pre">(major,</span> <span class="pre">minor,</span> <span class="pre">patch)</span></code>. If not, then it will return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">linked=True</span></code> is the default behavior and the function will return the
-version of the library that Pygame is linked against, while <code class="docutils literal notranslate"><span class="pre">linked=False</span></code>
-will return the version of the library that Pygame is compiled against.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in pygame 2.0.0.</span></p>
-</div>
-<div class="versionchanged">
-<p><span class="versionmodified changed">Changed in pygame 2.1.4: </span><code class="docutils literal notranslate"><span class="pre">linked</span></code> keyword argument added and default behavior changed from returning compiled version to returning linked version</p>
 </div>
 </dd></dl>
 
@@ -373,8 +364,8 @@ than pygame.</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>this function is an alias for <a class="reference internal" href="#pygame.image.tostring" title="pygame.image.tostring"><code class="xref py py-func docutils literal notranslate"><span class="pre">tostring()</span></code></a>. The use of this
-function is recommended over <a class="reference internal" href="#pygame.image.tostring" title="pygame.image.tostring"><code class="xref py py-func docutils literal notranslate"><span class="pre">tostring()</span></code></a> as of pygame 2.1.3.
+<p>this function is an alias for <a class="reference internal" href="#pygame.image.fromstring" title="pygame.image.fromstring"><code class="xref py py-func docutils literal notranslate"><span class="pre">fromstring()</span></code></a>. The use of this
+function is recommended over <a class="reference internal" href="#pygame.image.fromstring" title="pygame.image.fromstring"><code class="xref py py-func docutils literal notranslate"><span class="pre">fromstring()</span></code></a> as of pygame 2.1.3.
 This function was introduced so it matches nicely with other
 libraries (PIL, numpy, etc), and with people's expectations.</p>
 </div>
@@ -527,7 +518,7 @@ format support.</p>
 
 <br /><br />
 <hr />
-<a href="https://github.com/pygame/pygame/edit/main/docs/reST/ref\image.rst" rel="nofollow">Edit on GitHub</a>
+<a href="https://github.com/pygame-community/pygame-ce/edit/main/docs/reST/ref/image.rst" rel="nofollow">Edit on GitHub</a>
             <div class="clearer"></div>
           </div>
       </div>
@@ -548,9 +539,9 @@ format support.</p>
         <li class="right" >
           <a href="gfxdraw.html" title="pygame.gfxdraw"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">pygame v2.1.4 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pygame v2.1.3 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">pygame.image</span></code></a></li>
-    <script type="text/javascript" src="https://www.pyga.me/comment/jquery.plugin.docscomments.js"></script>
+    <script type="text/javascript" src="https://www.pygame.org/comment/jquery.plugin.docscomments.js"></script>
 
       </ul>
     </div>

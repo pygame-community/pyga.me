@@ -6,16 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>pygame.Surface &#8212; pygame v2.1.4 documentation</title>
+    <title>pygame.Surface &#8212; pygame v2.1.3 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pygame.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../_static/pygame.ico"/>
+    <link rel="icon" href="../_static/pygame.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="pygame.surfarray" href="surfarray.html" />
@@ -27,14 +24,14 @@
   <div class="header">
 	<div class="flex-container">
 	<div class="logo">
-	  <a href="https://www.pyga.me/">
+	  <a href="https://pyga.me">
 	    <img src="../_static/pygame_tiny.png"/>
 	  </a>
 	  <h5>pygame documentation</h5>
 	</div>
 	<div class="pagelinks">
 	  <div class="top">
-	    <a href="https://www.pyga.me/">Pygame Home</a> ||
+	    <a href="https://pyga.me">Pygame Home</a> ||
 	    <a href="../index.html">Help Contents</a> ||
 	    <a href="../genindex.html">Reference Index</a>
 
@@ -351,11 +348,6 @@
 </td>
 <td>—</td>
 <td>pixel buffer address</td>
-</tr>
-<tr class="row-even"><td><div class="line"><a class="toc reference external" href="surface.html#pygame.Surface.premul_alpha">pygame.Surface.premul_alpha</a></div>
-</td>
-<td>—</td>
-<td>returns a copy of the surface with the RGB channels pre-multiplied by the alpha channel.</td>
 </tr>
 </tbody>
 </table>
@@ -1113,11 +1105,8 @@ have a larger pitch than their real width.</p>
 <p>This is not needed for normal pygame usage.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Starting in pygame 2.0, the masks are read-only and
-accordingly this method will raise a TypeError if called.</p>
-</div>
-<div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since pygame 2.0.0.</span></p>
+<p>In SDL2, the masks are read-only and accordingly this method will raise
+an AttributeError if called.</p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">New in pygame 1.8.1.</span></p>
@@ -1146,11 +1135,8 @@ integer.</p>
 <p>This is not needed for normal pygame usage.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Starting in pygame 2.0, the shifts are read-only and
-accordingly this method will raise a TypeError if called.</p>
-</div>
-<div class="deprecated">
-<p><span class="versionmodified deprecated">Deprecated since pygame 2.0.0.</span></p>
+<p>In SDL2, the shifts are read-only and accordingly this method will raise
+an AttributeError if called.</p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">New in pygame 1.8.1.</span></p>
@@ -1260,41 +1246,6 @@ the returned <a class="tooltip reference internal" href="bufferproxy.html#pygame
 </div>
 </dd></dl>
 
-<dl class="py method definition">
-<dt class="sig sig-object py title" id="pygame.Surface.premul_alpha">
-<span class="sig-name descname"><span class="pre">premul_alpha</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygame.Surface.premul_alpha" title="Permalink to this definition">¶</a></dt>
-<dd><div class="line-block">
-<div class="line"><span class="summaryline">returns a copy of the surface with the RGB channels pre-multiplied by the alpha channel.</span></div>
-<div class="line"><span class="signature">premul_alpha() -&gt; Surface</span></div>
-</div>
-<p><strong>Experimental:</strong> feature still in development available for testing and feedback. It may change.
-<a class="reference external" href="https://github.com/pygame/pygame/pull/3276">Please leave premul_alpha feedback with authors</a></p>
-<p>Returns a copy of the initial surface with the red, green and blue color channels multiplied
-by the alpha channel. This is intended to make it easier to work with the BLEND_PREMULTIPLED
-blend mode flag of the blit() method. Surfaces which have called this method will only look
-correct after blitting if the BLEND_PREMULTIPLED special flag is used.</p>
-<p>It is worth noting that after calling this method, methods that return the colour of a pixel
-such as get_at() will return the alpha multiplied colour values. It is not possible to fully
-reverse an alpha multiplication of the colours in a surface as integer colour channel data
-is generally reduced by the operation (e.g. 255 x 0 = 0, from there it is not possible to reconstruct
-the original 255 from just the two remaining zeros in the colour and alpha channels).</p>
-<p>If you call this method, and then call it again, it will multiply the colour channels by the alpha channel
-twice. There are many possible ways to obtain a surface with the colour channels pre-multiplied by the
-alpha channel in pygame, and it is not possible to tell the difference just from the information in the pixels.
-It is completely possible to have two identical surfaces - one intended for pre-multiplied alpha blending and
-one intended for normal blending. For this reason we do not store state on surfaces intended for pre-multiplied
-alpha blending.</p>
-<p>Surfaces without an alpha channel cannot use this method and will return an error if you use
-it on them. It is best used on 32 bit surfaces (the default on most platforms) as the blitting
-on these surfaces can be accelerated by SIMD versions of the pre-multiplied blitter.</p>
-<p>In general pre-multiplied alpha blitting is faster then 'straight alpha' blitting and produces
-superior results when blitting an alpha surface onto another surface with alpha - assuming both
-surfaces contain pre-multiplied alpha colours.</p>
-<div class="versionadded">
-<p><span class="versionmodified added">New in pygame 2.1.4.</span></p>
-</div>
-</dd></dl>
-
 </dd></dl>
 
 </section>
@@ -1302,7 +1253,7 @@ surfaces contain pre-multiplied alpha colours.</p>
 
 <br /><br />
 <hr />
-<a href="https://github.com/pygame/pygame/edit/main/docs/reST/ref\surface.rst" rel="nofollow">Edit on GitHub</a>
+<a href="https://github.com/pygame-community/pygame-ce/edit/main/docs/reST/ref/surface.rst" rel="nofollow">Edit on GitHub</a>
             <div class="clearer"></div>
           </div>
       </div>
@@ -1323,9 +1274,9 @@ surfaces contain pre-multiplied alpha colours.</p>
         <li class="right" >
           <a href="sprite.html" title="pygame.sprite"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">pygame v2.1.4 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pygame v2.1.3 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">pygame.Surface</span></code></a></li>
-    <script type="text/javascript" src="https://www.pyga.me/comment/jquery.plugin.docscomments.js"></script>
+    <script type="text/javascript" src="https://www.pygame.org/comment/jquery.plugin.docscomments.js"></script>
 
       </ul>
     </div>
