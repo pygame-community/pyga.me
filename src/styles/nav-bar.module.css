@@ -10,7 +10,7 @@
 
 .title {
   font-weight: 700;
-  font-size: x-large;
+  font-size: 1.5rem;
 }
 
 .hamburgerContent {
@@ -20,6 +20,7 @@
 }
 
 .nav ul {
+  font-size: 1.05rem;
   padding: 0;
   margin: 0;
   list-style: none;

@@ -1,6 +1,6 @@
 <img alt="pyga.me" src="images/hero-section.png">
 
-<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="prs: welcome"> <img src="https://img.shields.io/github/license/pygame-community/pyga.me" alt="license"/> <img src="https://img.shields.io/github/actions/workflow/status/pygame-community/pyga.me/prettier.yml?label=lint status" alt="lint status"/> <img src="https://img.shields.io/github/deployments/pygame-community/pyga.me/github-pages?label=deployment%20status" alt="deployment status"> <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg" alt="code style: prettier"/>
+<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="prs: welcome"> <img src="https://img.shields.io/github/license/pygame-community/pyga.me" alt="license"/> <img src="https://img.shields.io/github/actions/workflow/status/pygame-community/pyga.me/prettier.yml?label=lint status" alt="lint status"/> <img src="https://img.shields.io/website?down_message=offline&label=website&up_message=online&url=https%3A%2F%2Fpyga.me%2F" alt="website status"> <img src="https://img.shields.io/website?down_message=offline&label=docs&up_message=online&url=https%3A%2F%2Fpyga.me%2Fdocs%2F" alt="docs status"> <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg" alt="code style: prettier"/> <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="code style: black">
 
 ## About
 
@@ -21,8 +21,10 @@ We welcome all outside contributors to help out on building our website, but the
 
 ### Instructions to Build
 
-1. Install NodeJS
-2. Run `npm install` to install all dependencies
-3. Run `npm run dev` to create a local server to start contributing!
-4. Open [http://localhost:3000](http://localhost:3000) to view your changes
-5. Before pushing a commit, please run `npx prettier --write .`
+1. Install [Visual Studio Code](https://code.visualstudio.com/)
+2. Install the [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) extensions for Visual Studio Code
+3. Install [NodeJS](https://nodejs.org/en/)
+4. Run `npm install` to install all dependencies
+5. Run `npm run dev` to create a local server to start contributing!
+6. Open [http://localhost:3000](http://localhost:3000) to view your changes
+7. Before pushing a commit, please run `npx prettier --write .` and `black .`

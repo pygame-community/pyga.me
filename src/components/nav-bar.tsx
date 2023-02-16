@@ -1,6 +1,4 @@
 import styles from '@/styles/nav-bar.module.css';
-import menu_open_icon from '../assets/hamburger-icons/menu_open.png';
-import menu_closed_icon from '../assets/hamburger-icons/menu_close.png';
 
 import React, { useState } from 'react';
 
@@ -15,7 +13,9 @@ export default function Navbar() {
     <>
       <div className={styles.titleContent}>
         <div className={styles.nav}>
-          <div className={styles.title}>pygame</div>
+          <div className={styles.title}>
+            <a href="">pygame</a>
+          </div>
           <ul>
             <li>
               <a href="docs">Documentation</a>
@@ -31,7 +31,9 @@ export default function Navbar() {
       </div>
       <div className={styles.hamburgerContent}>
         <nav className={styles.navbar}>
-          <img src={isOpen ? menu_closed_icon.src : menu_open_icon.src} onClick={handleButtonClick} />
+          <span className="material-symbols-outlined" onClick={handleButtonClick}>
+            menu
+          </span>
           <ul className={`${styles.navbarMenu} ${isOpen ? styles.visible : ''}`}>
             <li>
               <a href="docs">Documentation</a>

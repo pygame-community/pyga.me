@@ -1,0 +1,7 @@
+{
+  "prettier.configPath": ".prettierrc",
+  "prettier.ignorePath": ".prettierignore",
+  "python.formatting.provider": "black",
+  "python.formatting.autopep8Path": "black",
+  "editor.formatOnSave": true
+}
