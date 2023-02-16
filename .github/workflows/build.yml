@@ -27,7 +27,6 @@ concurrency:
 
 jobs:
   build:
-    # Build documentation
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -45,8 +44,9 @@ jobs:
           pip install pygame-ce --pre
       - name: Clone and move docs
         run: |
-        # Build actual site
-        uses: actions/checkout@v3
+          python utils/generate_docs.py
+
+      # Build website
       - name: Detect package manager
         id: detect-package-manager
         run: |
