@@ -12,7 +12,9 @@ export default function Hero() {
         </p>
         <p className={styles.frameworkgradient}>game framework</p>
         <p>that everyone uses</p>
-        <code className={styles.pipinstall}>pip install pygame-ce</code>
+        <div className={styles.pipinstallcontainer}>
+          <p className={styles.pipinstall}>$ pip install pygame-ce</p>
+        </div>
       </div>
       <div className={styles.showcasecontainer}>
         <div className={styles.showcaseimage} />
