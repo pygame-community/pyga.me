@@ -2,8 +2,6 @@
   display: flex;
   color: white;
   justify-content: space-between;
-  gap: 2rem;
-  width: 100vw;
   padding: 0 75px;
   height: 10vh;
   align-items: center;
@@ -14,28 +12,35 @@
   font-size: 1.5rem;
 }
 
+.mobilemenuicon {
+  display: none;
+}
+
 .nav ul {
-  font-size: 1.05rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
   display: flex;
-  gap: 1rem;
+  font-size: 1.05rem;
+  list-style: none;
+  gap: 16px;
 }
 
 .nav a {
-  color: inherit;
+  color: white;
   text-decoration: none;
-  height: 100%;
   display: flex;
   align-items: center;
-  padding: 0.25rem;
+  padding: 4px;
   opacity: 1;
-  transition: 0.5s;
+  transition: 500ms;
 }
 
 .nav a:hover {
   color: #dedede;
+}
+
+.mobileroutes a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: left;
 }
 
 /* Ultra Small
@@ -46,6 +51,20 @@
   }
 
   .nav {
-    justify-content: center;
+    display: block;
+    justify-content: baseline;
+    padding: 35px 35px;
+  }
+
+  .nav .mobilemenuicon {
+    display: block;
+  }
+
+  .nav ul {
+    display: block;
+  }
+
+  .nav .routes {
+    display: none;
   }
 }
