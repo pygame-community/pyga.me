@@ -16,11 +16,29 @@
   font-size: 1rem;
 }
 
+.pipinstallcontainer {
+  width: max-content;
+  background-color: rgb(20, 20, 20);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+
+  margin-top: 0.5em;
+}
+
 .pipinstall {
   font-size: 1.2rem;
-  background-color: rgb(20, 20, 20);
-  padding: 15px;
-  border-radius: 10px;
+  font-family: 'Source Code Pro', monospace;
+
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+
+  color: white;
+
+  padding-right: 0.5ch;
+  border-right: 2px solid;
+
+  animation: typing 1.5s steps(35, end) 1s forwards, blinking 600ms step-end 8 forwards;
 }
 
 .showcasecontainer {
@@ -42,6 +60,30 @@
   background-image: linear-gradient(45deg, rgb(22, 125, 53), rgb(63, 188, 111));
   background-clip: text;
   color: transparent;
+}
+
+@keyframes blinking {
+  from {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+    opacity: 1;
+  }
+
+  to {
+    width: 100%;
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 1500px) {
@@ -103,6 +145,7 @@
     border-radius: 10px;
   }
 
+  .pipinstallcontainer,
   .pipinstall {
     display: none;
   }
