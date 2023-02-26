@@ -8,7 +8,7 @@ The official website representing Pygame: Community Edition utilizing NextJS, Re
 
 ## Contributing
 
-Pull requests from outside the core development team are welcome, check out the [good-first-issues](https://github.com/pygame-community/pyga.me/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue+%F0%9F%94%B0%22) tag.
+Pull requests from outside the core development team are welcome, check out the [good-first-issue](https://github.com/pygame-community/pyga.me/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) tag.
 Before you create a pull request, please create an issue using our [issue tracker](https://github.com/pygame-community/pyga.me/issues) to avoid any work efforts being lost.
 
 ### Limitations to Outside Contributors
