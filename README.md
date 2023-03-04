@@ -6,6 +6,20 @@
 
 The official website representing Pygame: Community Edition utilizing NextJS, ReactJS, and TypeScript. We are currently using GitHub Pages to deploy our website, which might change in the future if we decide to add a database to store user projects.
 
+## Frequently Asked Questions
+
+1. Why the fancy tech stack?
+
+In the future, this will not be just a fancy static website, we will be adding blog and user project showcase support and NextJS would be a big help in making it happen while Tailwind CSS would allow us to add CSS easier.
+
+2. Can I add my game to the website?
+
+Maybe! We currently do not have an official way to request for your game to be featured, but for now just message `Novial#1450` through Discord. If your game impresses us, we will add it to the site's homepage.
+
+3. Why is the domain [pyga.me](https://pyga.me) instead of [pygame.org](https://pygame.org)
+
+[pygame.org](https://pygame.org) is not associated with the Pygame Community.
+
 ## Contributing
 
 Pull requests from outside the core development team are welcome, check out the [good-first-issue](https://github.com/pygame-community/pyga.me/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) tag.
