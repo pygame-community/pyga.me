@@ -50,43 +50,19 @@ const games = [
 class Powered extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
-    this.state = {
-      currentGameId: 0,
-    };
-    this.changeBackground = this.changeBackground.bind(this);
-  }
-
-  changeBackground(e: any) {
-    const data = Object.assign({}, e.target.dataset);
-    this.setState({ currentGameId: data.info });
   }
 
   render() {
-    // TODO: clean this up
-    if (this.state.currentGameId === undefined) {
-      this.setState({ currentGameId: 0 });
-    }
-
-    var currentGame = games[this.state.currentGameId];
-    if (currentGame === undefined) {
-      currentGame = games[0];
-    }
-
     return (
-      <div
-        className={styles.powered}
-        style={{
-          backgroundImage: `url(${currentGame.image})`,
-        }}
-      >
-        <div className={styles.poweredcontainer}>
+      <div className={styles.powered}>
+        <div>
           <div className={styles.header}>Pygame Powered</div>
           Over the many years pygame has been around, there have been amazing projects created by the community.
           <div className={styles.poweredcards}>
             {games.map((data, key) => {
               return (
-                <div key={key} onMouseEnter={this.changeBackground} data-info={key}>
-                  <PoweredCard name={data.name} author={data.author} link={data.mainlink} />
+                <div key={key}>
+                  <PoweredCard name={data.name} author={data.author} link={data.mainlink} image={data.image} />
                 </div>
               );
             })}
