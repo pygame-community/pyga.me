@@ -3,6 +3,7 @@ import styles from '@/styles/powered.module.css';
 import drawnDownAbyss1 from '@/assets/drawn-down-abyss-1.png';
 import froggo1 from '@/assets/froggo-swing-n-grapple-1.png';
 import resync1 from '@/assets/resync-1.png';
+import sixshooter1 from '@/assets/six-shooter-1.png';
 import tuxemon1 from '@/assets/tuxemon-1.png';
 import PoweredCard from './powered-card';
 
@@ -37,6 +38,12 @@ const games = [
     author: 'The Tuxemon Community',
     image: tuxemon1.src,
     mainlink: 'https://github.com/Tuxemon/Tuxemon',
+  },
+  {
+    name: 'Six Shooter',
+    author: 'plasmastarfish',
+    image: sixshooter1.src,
+    mainlink: 'https://plasmastarfish.itch.io/six-shooter',
   },
 ];
 
