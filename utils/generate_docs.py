@@ -6,14 +6,13 @@ pygame documentation to the main website using  GitHub Actions. If
 you managed to run this very file, please discard your changes and
 do not do it again.
 """
-import pygame
 import shutil
 import os
 
 
 if "__main__" == __name__:
     target_directory = os.path.join("public", "docs")
-    docs_path = os.path.join(os.path.dirname(pygame.__file__), "docs", "generated")
+    docs_path = os.path.join("pygame-ce", "docs", "generated")
     print(f"Found these files: {os.listdir(docs_path)}")
     if os.path.exists(target_directory):
         print("public/docs exists found, deleting.")

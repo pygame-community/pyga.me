@@ -38,12 +38,14 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install pygame-ce
+      - name: Generate the pygame-ce documentation
         run: |
           python -m pip install --upgrade pip
-          pip install pygame-ce --pre
-      - name: Clone and move docs
-        run: |
+          pip install sphinx
+          git clone https://github.com/pygame-community/pygame-ce.git
+          cd pygame-ce
+          python setup.py docs
+          cd ../
           python utils/generate_docs.py
 
       # Build website
