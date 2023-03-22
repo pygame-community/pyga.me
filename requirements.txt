@@ -1,0 +1,2 @@
+# used for pygame-ce documentation & tutorials generation
+sphinx>=5.3.0
