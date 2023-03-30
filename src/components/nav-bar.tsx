@@ -22,7 +22,7 @@ export default function Navbar() {
             <a href="docs">Documentation</a>
           </li>
           <li>
-            <a href="tutorials">Tutorials</a>
+            <a href="docs/#tutorials">Tutorials</a>
           </li>
           <li>
             <a href="https://github.com/pygame-community/pygame-ce">Contribute</a>
