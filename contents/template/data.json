@@ -1,0 +1,8 @@
+{
+  "display-year": -1,
+  "display-month": -1,
+  "display-day": -1,
+  "display-authors": [{ "display-name": "novial", "github-name": "novialriptide" }],
+  "url-title": "something-like-this",
+  "short-description": "Keep this less than 24 words."
+}
