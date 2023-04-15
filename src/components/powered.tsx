@@ -1,4 +1,5 @@
-import React, { MouseEvent } from 'react';
+import React from 'react';
+import Head from 'next/head';
 import styles from '@/styles/powered.module.css';
 import drawnDownAbyss1 from '@/assets/drawn-down-abyss-1.png';
 import froggo1 from '@/assets/froggo-swing-n-grapple-1.png';
@@ -66,26 +67,33 @@ class Powered extends React.Component<any, any> {
     }
 
     return (
-      <div
-        className={styles.powered}
-        style={{
-          backgroundImage: `url(${currentGame.image})`,
-        }}
-      >
-        <div className={styles.poweredcontainer}>
-          <div className={styles.header}>Pygame Powered</div>
-          Over the many years pygame has been around, there have been amazing projects created by the community.
-          <div className={styles.poweredcards}>
-            {games.map((data, key) => {
-              return (
-                <div key={key} onMouseEnter={this.changeBackground} data-info={key}>
-                  <PoweredCard name={data.name} author={data.author} link={data.mainlink} />
-                </div>
-              );
-            })}
+      <>
+        <Head>
+          {games.map((data, key) => {
+            return <link key={key} rel="preload" href={data.image} as="image" />;
+          })}
+        </Head>
+        <div
+          className={styles.powered}
+          style={{
+            backgroundImage: `url(${currentGame.image})`,
+          }}
+        >
+          <div className={styles.poweredcontainer}>
+            <div className={styles.header}>Pygame Powered</div>
+            Over the many years pygame has been around, there have been amazing projects created by the community.
+            <div className={styles.poweredcards}>
+              {games.map((data, key) => {
+                return (
+                  <div key={key} onMouseEnter={this.changeBackground} data-info={key}>
+                    <PoweredCard name={data.name} author={data.author} link={data.mainlink} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }
