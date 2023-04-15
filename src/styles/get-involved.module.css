@@ -28,25 +28,3 @@
   font-size: 3rem;
   font-weight: 700;
 }
-
-.showcasecontainer {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.showcaseimage {
-  width: 750px;
-  height: 600px;
-  border-radius: 10px;
-  background-image: url(../assets/six-shooter-1.png);
-  background-position: center center;
-  background-color: aliceblue;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media only screen and (max-width: 1500px) {
-  .showcasecontainer {
-    display: none;
-  }
-}
