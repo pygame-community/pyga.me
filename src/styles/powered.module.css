@@ -2,6 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 80vh;
+  background-color: grey;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  image-rendering: crisp-edges;
+}
+
+.poweredcontainer {
+  width: 1200px;
+  max-width: 90vw;
 }
 
 .header {
@@ -10,7 +22,16 @@
 }
 
 .poweredcards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 950px) {
+  .poweredcards {
+    display: block;
+  }
+  .powered {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }

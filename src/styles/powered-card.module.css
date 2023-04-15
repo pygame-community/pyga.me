@@ -1,9 +1,6 @@
 .card {
-  width: 384px;
-  height: 208px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin: 20px;
+  padding: 15px;
 }
 
 .card:hover {
@@ -15,9 +12,4 @@
 .name {
   font-size: 1.5rem;
   font-weight: 700;
-  display: none;
-}
-
-.author {
-  display: none;
 }
