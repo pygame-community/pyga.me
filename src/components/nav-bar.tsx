@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <div className={styles.nav}>
       <div className={styles.title}>
-        <a href="">pygame</a>
+        <a href="">pygame-ce</a>
       </div>
       <div className={styles.mobilemenuicon} onClick={handleMenuClick}>
         <span className="material-symbols-outlined">menu</span>
