@@ -41,4 +41,4 @@ We welcome all outside contributors to help out on building our website, but the
 4. Run `npm install` to install all dependencies
 5. Run `npm run dev` to create a local server to start contributing!
 6. Open [http://localhost:3000](http://localhost:3000) to view your changes
-7. Before pushing a commit, please run `npx prettier --write .` and `black .`
+7. Before pushing a commit, please run `npx prettier --write .` and `black .`, although Visual Studio Code should automatically perform this task for you.
