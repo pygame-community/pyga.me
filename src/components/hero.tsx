@@ -11,7 +11,7 @@ export default function Hero() {
           Python
         </p>
         <p className={styles.frameworkgradient}>game framework</p>
-        <p>that everyone uses</p>
+        <p>to build powerful games</p>
         <div className={styles.pipinstallcontainer}>
           <p className={styles.pipinstall}>$ pip install pygame-ce</p>
         </div>
