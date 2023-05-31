@@ -10,7 +10,10 @@ export default function Hero() {
           </u>{' '}
           Python
         </p>
-        <p className={styles.frameworkgradient}>game library</p>
+        <div style={{ display: 'flex' }}>
+          <p className={styles.frameworkgradient}>game library</p>
+          <p>&nbsp;used</p>
+        </div>
         <p>to build powerful games</p>
         <div className={styles.pipinstallcontainer}>
           <p className={styles.pipinstall}>$ pip install pygame-ce</p>
