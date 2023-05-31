@@ -6,7 +6,7 @@ export default function GetInvolved() {
     <div className={styles.getinvolved}>
       <div className={styles.card}>
         <div className={styles.label}>Get Involved</div>
-        Join the global team behind the most popular Python game framework. Ranging from documentation revisions to
+        Join the global team behind the most popular Python game library. Ranging from documentation revisions to
         introducing new features to the pygame API.
         <div style={{ display: 'flex', marginTop: '10px' }}>
           <Button text="GitHub" fontSize="1.2rem" link="https://github.com/pygame-community" />
