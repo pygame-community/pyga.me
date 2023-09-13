@@ -33,7 +33,9 @@
   padding-right: 0.5ch;
   border-right: 2px solid;
 
-  animation: typing 1.5s steps(35, end) 1s forwards, blinking 600ms step-end 8 forwards;
+  animation:
+    typing 1.5s steps(35, end) 1s forwards,
+    blinking 600ms step-end 8 forwards;
 }
 
 .showcasecontainer {
