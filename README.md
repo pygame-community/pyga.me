@@ -14,7 +14,7 @@ In the future, this will not be just a fancy static website, we will be adding b
 
 2. Can I add my game to the website?
 
-Maybe! We currently do not have an official way to request for your game to be featured, but for now just message `Novial#1450` through Discord. If your game impresses us, we will add it to the site's homepage.
+Maybe! We currently do not have an official way to request for your game to be featured, but for now just message us through [Discord](https://discord.gg/pygame). If your game impresses us, we will add it to the site's homepage.
 
 3. Why is the domain [pyga.me](https://pyga.me) instead of [pygame.org](https://pygame.org)
 
