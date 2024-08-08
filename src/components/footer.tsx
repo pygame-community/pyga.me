@@ -15,16 +15,16 @@ export default function Footer() {
         <h3>Social Media</h3>
         <ul>
           <li>
-            <Link href="https://twitter.com/pygamecommunity">Twitter</Link>
+            <Link href="https://twitter.com/pygamecommunity" target="_blank" rel="noopener noreferrer">Twitter</Link>
           </li>
           <li>
-            <Link href="https://www.youtube.com/@pygamecommunity">YouTube</Link>
+            <Link href="https://www.youtube.com/@pygamecommunity" target="_blank" rel="noopener noreferrer">YouTube</Link>
           </li>
           <li>
-            <Link href="https://github.com/pygame-community">GitHub</Link>
+            <Link href="https://github.com/pygame-community" target="_blank" rel="noopener noreferrer">GitHub</Link>
           </li>
           <li>
-            <Link href="https://discord.gg/pygame">Discord</Link>
+            <Link href="https://discord.gg/pygame" target="_blank" rel="noopener noreferrer">Discord</Link>
           </li>
         </ul>
       </div>
