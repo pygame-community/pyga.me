@@ -42,7 +42,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install sphinx==7.1.2
-          pip install astroid<4.0.0 --force
+          pip install "astroid<4.0.0" --force
           git clone https://github.com/pygame-community/pygame-ce.git
           cd pygame-ce
           python setup.py docs
