@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import Head from 'next/head';
 import styles from '@/styles/powered.module.css';
 import drawnDownAbyss1 from '@/assets/drawn-down-abyss-1.png';
@@ -6,6 +6,7 @@ import froggo1 from '@/assets/froggo-swing-n-grapple-1.png';
 import resync1 from '@/assets/resync-1.png';
 import tuxemon1 from '@/assets/tuxemon-1.png';
 import PoweredCard from './powered-card';
+
 
 const games = [
   {
@@ -41,58 +42,44 @@ const games = [
   },
 ];
 
-class Powered extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-    this.state = {
-      currentGameId: 0,
-    };
-    this.changeBackground = this.changeBackground.bind(this);
-  }
 
-  changeBackground(e: any, id: number) {
-    this.setState({ currentGameId: id });
-  }
+const Powered: React.FC = () => {
+  const [currentGameId, setCurrentGameId] = useState(0);
 
-  changeBackgroundForSpecificID (id: number)  { // decorator, returns a different event handler for different elements
-    return (e: any) => {
-      this.changeBackground(e, id)
-    } 
-  }
+  const changeBackground = useCallback((id: number) => {
+    setCurrentGameId(id);
+  }, []);
 
-  render() {
-    var currentGame = games[this.state.currentGameId];
-  
-    return (
-      <>
-        <Head>
-          {games.map((data, key) => {
-            return <link key={key} rel="preload" href={data.image} as="image" />;
-          })}
-        </Head>
-        <div
-          className={styles.powered}
-          style={{
-            backgroundImage: `url(${currentGame.image})`,
-          }}
-        >
-          <div className={styles.poweredcontainer}>
-            <div className={styles.header}>Pygame Powered</div>
-            Over the many years pygame has been around, there have been amazing projects created by the community.
-            <div className={styles.poweredcards}>
-              {games.map((data, key) => {
-                return (
-                  <div key={key} onMouseEnter={this.changeBackgroundForSpecificID(key)} data-info={key}>
-                    <PoweredCard name={data.name} author={data.author} link={data.mainlink} />
-                  </div>
-                );
-              })}
-            </div>
+  const currentGame = games[currentGameId];
+
+  return (
+    <>
+      <Head>
+        {games.map((data, key) => (
+          <link key={key} rel="preload" href={data.image} as="image" />
+        ))}
+      </Head>
+
+      <div
+        className={styles.powered}
+        style={{
+          backgroundImage: `url(${currentGame.image})`,
+        }}
+      >
+        <div className={styles.poweredcontainer}>
+          <div className={styles.header}>Pygame Powered</div>
+          Over the many years pygame has been around, there have been amazing projects created by the community.
+          <div className={styles.poweredcards}>
+            {games.map((data, key) => (
+              <div key={key} onMouseEnter={() => changeBackground(key)} data-info={key}>
+                <PoweredCard name={data.name} author={data.author} link={data.mainlink} />
+              </div>
+            ))}
           </div>
         </div>
-      </>
-    );
-  }
-}
+      </div>
+    </>
+  );
+};
 
 export default Powered;
