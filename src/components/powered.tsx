@@ -50,22 +50,19 @@ class Powered extends React.Component<any, any> {
     this.changeBackground = this.changeBackground.bind(this);
   }
 
-  changeBackground(e: any) {
-    const data = Object.assign({}, e.target.dataset);
-    this.setState({ currentGameId: data.info });
+  changeBackground(e: any, id: number) {
+    this.setState({ currentGameId: id });
+  }
+
+  changeBackgroundForSpecificID (id: number)  { // decorator, returns a different event handler for different elements
+    return (e: any) => {
+      this.changeBackground(e, id)
+    } 
   }
 
   render() {
-    // TODO: clean this up
-    if (this.state.currentGameId === undefined) {
-      this.setState({ currentGameId: 0 });
-    }
-
     var currentGame = games[this.state.currentGameId];
-    if (currentGame === undefined) {
-      currentGame = games[0];
-    }
-
+  
     return (
       <>
         <Head>
@@ -85,7 +82,7 @@ class Powered extends React.Component<any, any> {
             <div className={styles.poweredcards}>
               {games.map((data, key) => {
                 return (
-                  <div key={key} onMouseEnter={this.changeBackground} data-info={key}>
+                  <div key={key} onMouseEnter={this.changeBackgroundForSpecificID(key)} data-info={key}>
                     <PoweredCard name={data.name} author={data.author} link={data.mainlink} />
                   </div>
                 );
