@@ -24,7 +24,7 @@ export default function Footer() {
             <Link href="https://github.com/pygame-community">GitHub</Link>
           </li>
           <li>
-            <Link href="https://discord.gg/pygame">Discord</Link>
+            <Link href="/discord">Discord</Link>
           </li>
         </ul>
       </div>
