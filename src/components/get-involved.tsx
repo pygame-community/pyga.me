@@ -10,7 +10,7 @@ export default function GetInvolved() {
         introducing new features to the pygame API.
         <div style={{ display: 'flex', marginTop: '10px' }}>
           <Button text="GitHub" fontSize="1.2rem" link="https://github.com/pygame-community" />
-          <Button text="Discord" fontSize="1.2rem" link="https://discord.gg/pygame" />
+          <Button text="Discord" fontSize="1.2rem" link="/discord" />
         </div>
       </div>
     </div>
